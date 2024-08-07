@@ -4,8 +4,8 @@ import Home from './components/Home'
 
 function App() {
   return (
-    <div className="App App-logo-spin">
-      <Header />
+    <div className="App">
+      {/* <Header /> */}
       <Home />
     </div>
   );
