@@ -1,3 +1,48 @@
 .App {
-  text-align: center;
+  display: flex;
+  height: 100vh;
+  flex-direction: row-reverse;
+  font-family: InterVariable;
+  animation: fadeIn 1.5s forwards;
+}
+
+.Header {
+  flex: 0 0 auto;
+  width: 200px; /* Adjust width as needed */
+}
+
+.Home {
+  flex: 1 0 0;
+  overflow-y: auto;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+html, body {
+  height: 100%;
+  width: 95%;
+  margin: 2% 10%;
+  background-color: #272d34;
+  opacity: .9;
+  
+}
+
+
+@keyframes fadeIn {
+  from {
+
+    opacity: 0;
+  }
+
+  to {
+
+    opacity: 1;
+  }
 }

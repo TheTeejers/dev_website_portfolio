@@ -1,32 +1,3 @@
-// import { useState, useEffect } from 'react';
-
-// export default function useDistance(imageRef, mouse) {
-//   const [centerX, setCenterX] = useState(0);
-//   const [centerY, setCenterY] = useState(0);
-//   const [bigX, setBigX] = useState(0);
-//   const [bigY, setBigY] = useState(0);
-
-//   useEffect(() => {
-//     if (imageRef.current) {
-//       const rect = imageRef.current.getBoundingClientRect();
-//       setCenterX(rect.left + rect.width / 2);
-//       setCenterY(rect.top + rect.height / 2);
-//     }
-//   }, [imageRef]);
-
-//   useEffect(() => {
-//     if (mouse.pageX !== null && mouse.pageY !== null) {
-//       const bigX = (-mouse.pageX + centerX);
-//       const bigY = (-mouse.pageY + centerY);
-//       setBigX(bigX);
-//       setBigY(bigY);
-//     }
-//   }, [mouse, centerX, centerY]);
-
-//   return { bigX, bigY };
-// };
-
-
 import { useState, useEffect } from 'react';
 
 export default function useDistance(imageRef) {
