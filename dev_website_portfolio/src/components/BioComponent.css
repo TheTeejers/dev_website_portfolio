@@ -1,5 +1,6 @@
 .aboutMe {
-  align: center;
+  width: 75%;
+
 }
 
 .image-container {
@@ -24,19 +25,19 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  /* Initial opacity */
+
   animation: fadeOutImg .75s forwards;
-  /* Initial fade-in animation */
   filter: grayscale(1);
 
 }
 
 .imageCover.hovered {
-  animation: fadeInImg 0.75s forwards;
-  /* inset 0 0 1.3rem #bc13fe; */
-  /* Overwrite initial animation on hover */
+  animation: fadeInImg 0.25s forwards;
 }
 
+.TOC {
+  z-index: 5;
+}
 
 
 .imgButton {
@@ -48,16 +49,10 @@
   /* border: none; */
   cursor: pointer;
   background-color: transparent;
-  z-index: 0;
+
 
 }
 
-
-.hiddenText {
-  background-color: black;
-  max-width: 75em;
-  color: blue;
-}
 
 .visibleDiv {
 
@@ -84,7 +79,7 @@
 }
 
 .visibleDiv.fadeOut {
-  animation: fadeOut 0.25s forwards;
+  animation: fadeOut 0.75s forwards;
 }
 
 
@@ -131,3 +126,6 @@
     opacity: 0.25;
   }
 }
+
+
+

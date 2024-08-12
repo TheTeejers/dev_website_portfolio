@@ -1,0 +1,185 @@
+.myHobbies {
+    text-indent: 5em;
+    text-align: center;
+
+    text-align: left;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    margin: .2em 2em 1.5em;
+}
+
+.helloWorld {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+
+
+.hobbies {
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    background-color: #272d34;
+    border: 0.6rem solid #fff;
+    border-radius: 2rem;
+    margin: 0.4em;
+    box-shadow: 0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa,
+        inset 0 0 1.3rem #0fa;
+
+}
+
+.neonText {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+}
+
+.tableOfContents{
+    animation: fadeInChapter 0.4s forwards;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 15;
+}
+
+.myName{
+    display: flex;
+    justify-content: center;
+    font-family: 'Cinzel Variable', serif;
+    font-size: 5em;
+    color: #fff;
+    text-shadow:
+    0 0 .05em #fff,
+    0 0 .1em #fff,
+    0 0 .2em #0fa;
+    margin-bottom: 0;
+
+}
+
+.workTitle {
+    display: flex;
+    justify-content: center;
+    font-family: 'Cinzel Variable', serif;
+    color: #fff;
+    text-shadow:
+    0 0 .05em #fff,
+    0 0 .1em #fff,
+    0 0 .2em #0fa;
+    margin-top: 0;
+}
+.chapters {
+    font-family: 'Cinzel Variable', serif;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    margin: .2em 2em 1.5em;
+    color: #fff;
+    text-shadow: none;
+    animation: fadeOutChapter 2s forwards;
+    cursor: pointer;
+    /* width: 5em; */
+   
+}
+
+.chapters.hovered {
+    animation: fadeInChapter 0.75s forwards;
+    /* text-shadow:
+    0 0 .05em #fff,
+    0 0 .5em #fff,
+    0 0 .1em #0fa; */
+}
+
+
+.spanBar {
+    justify-content: center;
+    display: block;
+    height: 9px;
+    width: 5em;
+    border-radius: 20px;
+    margin-top: .5em;
+    
+}
+
+.spanBar.hovered {
+    animation: fadeInBar 0.55s forwards;
+}
+
+
+.spanBar.fadeOutBar {
+    animation: fadeOutBar 2s forwards;
+  }
+
+@keyframes fadeInChapter {
+    from {
+      text-shadow: none;
+    }
+  
+    to {
+        text-shadow:
+        0 0 .5em #fff,
+        0 0 .6em #fff,
+        0 0 .75em #0fa;
+        
+    }
+  }
+
+@keyframes fadeOutChapter {
+    from {
+      text-shadow: 
+      0 0 .5em #fff,
+      0 0 .6em #fff,
+      0 0 .75em #0fa;
+    }
+  
+    to {
+        text-shadow: none;
+ 
+    }
+  }
+
+  @keyframes fadeInBar {
+    from {
+      box-shadow: none;
+    }
+  
+    to {
+        box-shadow: 
+        inset  0 0 .05em #fff,
+        inset 0 0 .5em #fff,
+        inset 0 0 .1em #0fa;
+        
+    }
+  }
+
+@keyframes fadeOutBar {
+    from {
+        box-shadow: 
+        inset  0 0 .05em #fff,
+        inset 0 0 .5em #fff,
+        inset 0 0 .1em #0fa;
+    }
+  
+    to {
+        box-shadow: none;
+ 
+    }
+  }
