@@ -32,26 +32,13 @@
         0 0 42px #0fa,
         0 0 82px #0fa,
         0 0 92px #0fa,
-        0 0 102px #0fa,
-        0 0 151px #0fa,
+
+
         inset 0 0 1.3rem #0fa;
 
 }
 
-.neonText {
-    color: #fff;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #0fa,
-        0 0 82px #0fa,
-        0 0 92px #0fa,
-        0 0 102px #0fa,
-        0 0 151px #0fa;
-}
-
-.tableOfContents{
+.tableOfContents {
     animation: fadeInChapter 0.4s forwards;
     display: flex;
     justify-content: center;
@@ -59,19 +46,53 @@
     z-index: 15;
 }
 
-.myName{
+.myName {
+
     display: flex;
     justify-content: center;
-    font-family: 'Cinzel Variable', serif;
-    font-size: 5em;
-    color: #fff;
+    font-family: "Monoton", sans-serif;
+    /* font-size: 130px; */
+    font-size: 5.5rem;
+    color: #9a959a;
+    /* position: absolute; */
+    top: 50%;
+        left: 50%;
+    /* transform: translate(-50%, -50%); */
+    font-weight: 400;
+    letter-spacing: 8px;
     text-shadow:
-    0 0 .05em #fff,
-    0 0 .1em #fff,
-    0 0 .2em #0fa;
-    margin-bottom: 0;
+        1px 0px 4px #FFF,
+        2px 0px 4px #FFF,
+        3px 0px 4px #FFF,
+        2px 0px 3px #0fa,
+        2px 3px 15px #0fa,
+        20px 0vw 200px #0fa;
+    margin: 0;
+
+
+
+
 
 }
+
+.flicker0 {
+    animation: flicker 2s linear 1;
+}
+
+.flicker1 {
+    animation: flicker 5s linear 2;
+}
+
+.flicker2 {
+    animation: flicker .5s linear 4;
+}
+
+.flicker3 {
+    animation: flicker 1.5s linear 2;
+}
+
+
+
 
 .workTitle {
     display: flex;
@@ -79,11 +100,14 @@
     font-family: 'Cinzel Variable', serif;
     color: #fff;
     text-shadow:
-    0 0 .05em #fff,
-    0 0 .1em #fff,
-    0 0 .2em #0fa;
+        0 0 .05em #fff,
+        0 0 .1em #fff,
+        0 0 .2em #0fa;
     margin-top: 0;
+    animation: flicker .5s linear 8,
+        flicker 2s linear 2;
 }
+
 .chapters {
     font-family: 'Cinzel Variable', serif;
     justify-content: center;
@@ -93,20 +117,27 @@
     justify-content: center;
     margin: .2em 2em 1.5em;
     color: #fff;
-    text-shadow: none;
-    animation: fadeOutChapter 2s forwards;
+    text-shadow:
+        0 0 .5em #fff,
+        0 0 .6em #fff,
+        0 0 .75em #0fa;
+    animation: flicker 1s linear 4;
     cursor: pointer;
     /* width: 5em; */
-   
+
+
 }
 
 .chapters.hovered {
-    animation: fadeInChapter 0.75s forwards;
-    /* text-shadow:
-    0 0 .05em #fff,
-    0 0 .5em #fff,
-    0 0 .1em #0fa; */
+    animation:
+        flicker .3s linear 14;
+
 }
+/* 
+.chapters.unhovered {
+    animation: fadeOutChapter 2s forwards;
+
+} */
 
 
 .spanBar {
@@ -116,70 +147,114 @@
     width: 5em;
     border-radius: 20px;
     margin-top: .5em;
-    
+
+    box-shadow: none;
+
+    /* animation: fadeInName .75s forwards, flicker .75s linear 7; */
 }
 
 .spanBar.hovered {
-    animation: fadeInBar 0.55s forwards;
+    animation: fadeInBar 0.55s forwards,
+        flicker .3s linear 14;
 }
 
 
-.spanBar.fadeOutBar {
-    animation: fadeOutBar 2s forwards;
-  }
+.spanBar.unhovered {
+    animation: fadeOutBar 1s forwards;
+}
 
-@keyframes fadeInChapter {
+@keyframes fadeInName {
     from {
-      text-shadow: none;
+        text-shadow: none;
     }
-  
+
     to {
+        color: #fff;
         text-shadow:
-        0 0 .5em #fff,
-        0 0 .6em #fff,
-        0 0 .75em #0fa;
-        
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #0fa,
+            0 0 82px #0fa,
+            0 0 92px #0fa,
+
     }
-  }
+
+}
 
 @keyframes fadeOutChapter {
     from {
-      text-shadow: 
-      0 0 .5em #fff,
-      0 0 .6em #fff,
-      0 0 .75em #0fa;
+        text-shadow:
+            0 0 .5em #fff,
+            0 0 .6em #fff,
+            0 0 .75em #0fa;
     }
-  
+
     to {
         text-shadow: none;
- 
-    }
-  }
 
-  @keyframes fadeInBar {
+    }
+}
+
+@keyframes fadeInBar {
     from {
-      box-shadow: none;
+        box-shadow: none;
     }
-  
+
     to {
-        box-shadow: 
-        inset  0 0 .05em #fff,
-        inset 0 0 .5em #fff,
-        inset 0 0 .1em #0fa;
-        
+        box-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #0fa,
+            /* 0 0 82px #0fa,
+        0 0 92px #0fa, */
+            inset 0 0 .05em #fff,
+            inset 0 0 .5em #fff,
+            inset 0 0 .1em #0fa;
+
     }
-  }
+}
 
 @keyframes fadeOutBar {
     from {
-        box-shadow: 
-        inset  0 0 .05em #fff,
-        inset 0 0 .5em #fff,
-        inset 0 0 .1em #0fa;
+        box-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #0fa,
+            inset 0 0 .05em #fff,
+            inset 0 0 .5em #fff,
+            inset 0 0 .1em #0fa;
     }
-  
+
     to {
         box-shadow: none;
- 
+
     }
-  }
+}
+
+@keyframes flicker {
+
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    70%,
+    100% {
+
+        opacity: .99;
+
+    }
+
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    69.999% {
+        opacity: 0.4;
+    }
+}
