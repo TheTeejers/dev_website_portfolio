@@ -1,37 +1,124 @@
 .App {
   display: flex;
+  justify-content: center;
   height: 100vh;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
   font-family: InterVariable;
-  animation: fadeIn 1.5s forwards;
+  animation: fadeIn 2.5s forwards;
+  /* overflow-y: scroll; */
 }
 
-.Header {
-  flex: 0 0 auto;
-  width: 200px; /* Adjust width as needed */
+.closeTopicButton {
+  outline:none;
+  border:none;
+  border-radius: 40%;
+  text-decoration:none;
+  text-transform:uppercase;
+  background:#202020;
+  color:#eaeaea;
+  /* box-sizing:border-box; */
+  /* margin-top:20px; */
+  padding:10px 40px;
+  position: absolute;
+  bottom: 1%;
+  right: 2%;
+
+  box-shadow:
+  1px 0px 4px #FFF,
+  2px 0px 4px #FFF,
+  3px 0px 4px #FFF,
+  2px 0px 3px #0fa,
+  2px 3px 15px #0fa,
+
+  inset 0 0 .25em #fff,
+  inset 0 0 .51em #fff,
+  inset 0 0 .75em #0fa;
 }
 
-.Home {
-  flex: 1 0 0;
-  overflow-y: auto;
+.topicSelectedDiv {
+  position: absolute;
+  color: #fff;
+  border: #fff;
+  border-style: groove;
+  margin: 5%;
+  background-color: black;
+  border-radius: 5%;
+  z-index: 50;
+  /* padding: 5%; */
+  height: 85%;
+  width: 75%;
+
+
+  box-shadow:
+    1px 0px 4px #FFF,
+    2px 0px 4px #FFF,
+    3px 0px 4px #FFF,
+    2px 0px 3px #0fa,
+    2px 3px 15px #0fa,
+    20px 0vw 200px #0fa,
+    inset 0 0 1em #fff,
+    inset 0 0 2em #fff,
+    inset 0 0 3em #0fa;
+  transition: all 1s ease-in-out allow-discrete;
+  overflow-y: scroll;
+  scrollbar-color: #007 #bada55;
+  scrollbar-width: thin;
 }
+
+.topicSelectedDiv.show {
+  transform: translateY(0vh) translateX(0vh);
+}
+
+.topicSelectedDiv.hide {
+  z-index: -50;
+  transform: translateY(110vh) translateX(110vh);
+}
+
+.topicContainer {
+  margin: 2%;
+  height: 90%;
+  width: 95%;
+  overflow-y: scroll;
+  border-style: groove;
+  border-radius: 5%;
+  box-shadow:
+    1px 0px 4px #FFF,
+    2px 0px 4px #FFF,
+    3px 0px 4px #FFF,
+    2px 0px 3px #0fa,
+    2px 3px 15px #0fa,
+    20px 0vw 200px #0fa;
+  /* display: flex;
+  justify-content: center; */
+
+}
+
+.tableOfContents {
+
+  z-index: -200;
+}
+
 
 :root {
-  font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-family: InterVariable, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  /* fix for Chrome */
 }
 
 @supports (font-variation-settings: normal) {
-  :root { font-family: InterVariable, sans-serif; }
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
 }
 
-html, body {
-  height: 100%;
-  width: 95%;
-  margin: 2% 10%;
+html,
+body {
+
+  /* margin: 2%; */
   background-color: #272d34;
   opacity: .9;
-  
+  overflow: hidden;
+
 }
 
 
@@ -44,5 +131,48 @@ html, body {
   to {
 
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.transition {
+  /* position:absolute; */
+  height: 80%;
+  width: 50%;
+  /* background:#d6d6d6;  */
+  /* transform:  translateX(-50px); */
+  /* transition:2s all linear; */
+  transition: all 0.5s ease-out allow-discrete;
+}
+
+
+
+
+.anim-trans {
+  animation: anim 1s linear;
+}
+
+@keyframes anim {
+  from {
+    position: absolute;
+
+    transform: translateY(110vh) translateX(110vh);
+
+  }
+
+  to {
+    /* position:absolute; */
+
+    /* returns the sun to its default position */
+    transform: translateY(0) translateX(0);
   }
 }
