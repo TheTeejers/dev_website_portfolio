@@ -1,5 +1,6 @@
 import React from 'react';
 import './TextContent.css';
+import TJSelfie from '../assets/selfie_pic.jpg';
 
 
 const Bonus = (props) => {
@@ -10,8 +11,16 @@ const Bonus = (props) => {
     console.log(hobbies);
 
     return (
-        <div className='hobbies'>
-            <h1 className='helloWorld'>{hobbies.title}</h1>
+        <div className='topicDiv'>
+                           <img
+
+  
+                        src={TJSelfie}
+                        className={`imageCover `}
+                        alt="TJ selfie"
+
+                    />
+            <h1 className='topicTitle'>{hobbies.title}</h1>
             {hobbies.paragraphs.map((paragraph, index) => (
                 <p className='myHobbies ' key={index}>{paragraph}</p>
             ))}

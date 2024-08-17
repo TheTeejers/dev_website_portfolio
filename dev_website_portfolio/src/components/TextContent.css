@@ -47,17 +47,15 @@
 }
 
 .myName {
-
     display: flex;
     justify-content: center;
     font-family: "Monoton", sans-serif;
-    /* font-size: 130px; */
+
     font-size: 5.5rem;
     color: #9a959a;
-    /* position: absolute; */
+    margin-top: 0%;
     top: 50%;
-        left: 50%;
-    /* transform: translate(-50%, -50%); */
+    left: 50%;
     font-weight: 400;
     letter-spacing: 8px;
     text-shadow:
@@ -68,11 +66,6 @@
         2px 3px 15px #0fa,
         20px 0vw 200px #0fa;
     margin: 0;
-
-
-
-
-
 }
 
 .flicker0 {
@@ -91,6 +84,23 @@
     animation: flicker 1.5s linear 2;
 }
 
+
+.imageCover {
+  
+  width: 25em;
+  height: 25em;
+  border-radius: 5%;
+  /* overflow: hidden; */
+  /* position: absolute; */
+left: 50%;
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
+
+
+ 
+
+}
 
 
 
@@ -133,6 +143,7 @@
         flicker .3s linear 14;
 
 }
+
 /* 
 .chapters.unhovered {
     animation: fadeOutChapter 2s forwards;
@@ -162,6 +173,22 @@
 .spanBar.unhovered {
     animation: fadeOutBar 1s forwards;
 }
+
+
+.topicDiv {
+    margin: 1% 3%;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
 
 @keyframes fadeInName {
     from {

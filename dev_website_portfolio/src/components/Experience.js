@@ -3,18 +3,18 @@ import './TextContent.css';
 
 
 const Experience = (props) => {
-    const experience = props.content; // Access data from props
+    const content = props.content; // Access data from props
     console.log(props);
     
     console.log('props.content');
-    console.log(experience);
-    console.log(experience.company);
+    console.log(content);
+    console.log(content.company);
 
     return (
-        <div className='experience'>
-            <h1 className='sectionName'>Experience</h1>
+        <div className='topicDiv'>
+            <h1 className='topicTitle'>{content[0].topicTitle}</h1>
 
-            {experience.map((topicObject, index) => (
+            {content.map((topicObject, index) => (
                 <div key={index}>
                     <h3>
                             {topicObject.company}
@@ -22,7 +22,7 @@ const Experience = (props) => {
                     <p> 
                     {topicObject.dates}
                     </p>
-                    {Array.isArray(topicObject.responsibilities) && (  // Check if it's an array
+                    {Array.isArray(topicObject.responsibilities) && (  
             <div>
                 <h4>Responsibilities</h4>
                 {topicObject.responsibilities.map((responsibility, index) => (

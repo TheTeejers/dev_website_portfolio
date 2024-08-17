@@ -1,6 +1,11 @@
 {
   "dependencies": {
     "@fontsource-variable/cinzel": "^5.0.13",
+    "@react-email/components": "0.0.22",
+    "react-mailto": "^0.4.0",
     "react-router-dom": "^6.26.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
