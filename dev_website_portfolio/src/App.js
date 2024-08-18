@@ -14,7 +14,6 @@ import Footer from './components/Footer.js';
 
 function App() {
   const [visibleTopic, setVisibleTopic] = useState(null);
-  const [showTopic, setShowTopic] = useState('hide');
   const content = Content();
   const [translateX, setTranslateX] = useState(200);
   const [translateY, setTranslateY] = useState(200);
@@ -26,9 +25,7 @@ function App() {
     return randomDigit * randomSign;
   }
 
-  const handleClick = () => {
-    setIsTransitionActive(!isTransitionActive);
-  };
+
 
   // console.log('translateX');
   // console.log(translateX);
@@ -38,7 +35,10 @@ function App() {
 
   const resestShowTopic = () => {
     const randomX = getRandomDigitWithSign();
-    const randomY = getRandomDigitWithSign(); // You can adjust this value as needed
+    const randomY = (getRandomDigitWithSign() > 0 ? getRandomDigitWithSign() - 150 : getRandomDigitWithSign() + 150) ; // You can adjust this value as needed
+
+    console.log(randomX, randomY);
+    
     setTranslateX(randomX);
     setTranslateY(randomY);
     setIsTransitionActive(!isTransitionActive);

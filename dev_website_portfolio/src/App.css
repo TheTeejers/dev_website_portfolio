@@ -1,18 +1,23 @@
 .App {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   font-family: InterVariable;
   animation: fadeIn 2.5s forwards;
   flex-direction: column;
- scroll-behavior: unset;
+
+ overflow: hidden;
+ position: absolute;
+ 
 }
 
 html,
 body {
   background-color: #272d34;
   opacity: .9;
-  overflow: hidden;
+
+  
 }
 
 .closeTopicButton {
@@ -44,7 +49,7 @@ body {
   box-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 200px #0fa, inset 0 0 1em #fff, inset 0 0 2em #fff, inset 0 0 3em #0fa;
   transition: all 1s ease-in-out allow-discrete;
   overflow: hidden;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .topicSelectedDiv.show {
@@ -120,43 +125,22 @@ body {
 @media (max-width: 768px) {
 
   /* Tablet breakpoint */
-  .App {
-    overflow: hidden;
-  }
-
   .topicSelectedDiv {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     margin: 0;
   }
 
-  .topicContainer {
-    /* Adjust styles for tablets */
-  }
-
-  /* Add more selectors and styles as needed */
 }
 
 @media (max-width: 480px) {
 
   /* Phone breakpoint */
-  .App {
-    overflow: hidden;
-  }
-
-  .closeTopicButton {
-    /* Adjust styles for phones */
-  }
-
   .topicSelectedDiv {
     width: 100%;
-    height: 100%;
+    height: 90%;
     margin: 0;
   }
 
-  .topicContainer {
-    /* Adjust styles for phones */
-  }
 
-  /* Add more selectors and styles as needed */
 }
