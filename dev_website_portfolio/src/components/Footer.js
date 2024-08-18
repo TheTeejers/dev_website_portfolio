@@ -46,9 +46,10 @@ const Footer = (props) => {
         </a>
         <a
           className="iconLinks"
-          href={`mailto:${contact.email}`}
-          target="blank">
+          href= 'mailto:tjloughry@gmail.com?subject=Message%20from%20TJLoughry.com'
+                 target="blank">
           <img
+          
             src={gmail}
             alt="gmail"
             className={`linkedIcons ${isImageHovered === 'gmail' ? 'hovered' : 'unhovered'}`}

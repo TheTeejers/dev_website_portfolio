@@ -1,7 +1,5 @@
 import React from 'react';
 import './TextContent.css';
-import { Link } from "@react-email/components";
-
 
 const ContactSection = (props, key) => {
     const contact = props.content;
