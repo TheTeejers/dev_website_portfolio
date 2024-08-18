@@ -51,12 +51,12 @@ const TableOfContents = (props) => {
                         onMouseOut={() => handleHover(index, false)}
                         onClick={() => handleClick(topicObject, index)} // Access the value
                     >
-                        <span className={`spanBar ${hoveredIndex === index ? 'hovered' : startBlank}`}></span>
+                        <span className={`spanBar ${hoveredIndex === index ? 'hovered' : startBlank} left`}></span>
                         &nbsp;
                         {/* Access the value from the object */}
                         {Object.values(topicObject)}
                         &nbsp;
-                        <span className={`spanBar ${hoveredIndex === index ? 'hovered' : startBlank}`}></span>
+                        <span className={`spanBar ${hoveredIndex === index ? 'hovered' : startBlank} right`}></span>
                     </p>
                 ))}
 
