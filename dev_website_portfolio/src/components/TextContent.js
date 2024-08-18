@@ -20,43 +20,36 @@ const TableOfContents = (props) => {
 
     const handleClick = (topicObject, index) => {
         props.onTopicClick({ topicObject, index });
-        // console.log('topicObject');
-        // console.log(topicObject);
-        // console.log(content.selfTopics2[index][topic]);
-
-
-        // content.selfTopics.forEach(item => {
-        //     console.log(Object.values(item));
-        // });
 
     };
 
     return (
         <div className='tableOfContents'>
             <div>
-                <h1 className={`myName`}><span className={`${startBlank === '' ? 'flicker0' : 'myName'}`}>{content.myName[0]}{content.myName[1]}</span> </h1>
-                <h1 className={`myName`}> <span className={`${startBlank === '' ? 'flicker1' : 'myName'}`}>{content.myName[2]}</span><span className={`${startBlank === '' ? 'flicker2' : 'myName'}`}>{content.myName[3]}</span><span className={`${startBlank === '' ? 'flicker3' : 'myName'}`}>{content.myName[4]}</span></h1>
+                <h1 className={`myName first`}><span className={`${startBlank === '' ? 'flicker0' : 'myName'}`}>{content.myName[0]}{content.myName[1]}</span> </h1>
+                <h1 className={`myName last`}> <span className={`${startBlank === '' ? 'flicker1' : 'myName'}`}>{content.myName[2]}</span><span className={`${startBlank === '' ? 'flicker2' : 'myName'}`}>{content.myName[3]}</span><span className={`${startBlank === '' ? 'flicker3' : 'myName'}`}>{content.myName[4]}</span></h1>
                 {content.workTitle.map((title, index) => (
                     <h3
                         key={index}
-                        className='workTitle'>
+                        className={`workTitle ${title[2]}`} >
                         {title}
                     </h3>
                 ))}
-                {content.selfTopics.map((topicObject, index) => (              
+                {content.selfTopics.map((topicObject, index) => (   
+                                           
                     <p
                         key={index}
-                        className={`chapters ${hoveredIndex === index ? 'hovered' : startBlank}`}
+                        className={`chapters ${hoveredIndex === index ? 'hovered' : startBlank} ${Object.values(topicObject)}`}
                         onMouseOver={() => handleHover(index, true)}
                         onMouseOut={() => handleHover(index, false)}
                         onClick={() => handleClick(topicObject, index)} // Access the value
                     >
-                        <span className={`spanBar ${hoveredIndex === index ? 'hovered' : startBlank}`}></span>
+                        <span className={`spanBar ${hoveredIndex === index ? 'hovered' : startBlank} left` }></span>
                         &nbsp;
                         {/* Access the value from the object */}
                         {Object.values(topicObject)}
                         &nbsp;
-                        <span className={`spanBar ${hoveredIndex === index ? 'hovered' : startBlank}`}></span>
+                        <span className={`spanBar ${hoveredIndex === index ? 'hovered' : startBlank} right`}></span>
                     </p>
                 ))}
 
