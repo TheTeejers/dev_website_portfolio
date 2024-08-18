@@ -5,7 +5,7 @@
   font-family: InterVariable;
   animation: fadeIn 2.5s forwards;
   flex-direction: column;
-  position: absolute;
+ scroll-behavior: unset;
 }
 
 html,
@@ -43,6 +43,7 @@ body {
   width: 75%;
   box-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 200px #0fa, inset 0 0 1em #fff, inset 0 0 2em #fff, inset 0 0 3em #0fa;
   transition: all 1s ease-in-out allow-discrete;
+  overflow: hidden;
   overflow-y: scroll;
 }
 

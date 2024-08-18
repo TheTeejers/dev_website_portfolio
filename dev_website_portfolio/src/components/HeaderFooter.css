@@ -9,12 +9,12 @@
   .head {
     margin-top: 5%;
     background: linear-gradient(to left, #272d34, #333 50%, #0fa 75%, #272d34);
-    animation: flicker .5s linear 4;
+    animation: flicker .5s linear 8;
   }
   
   .foot {
     background: linear-gradient(to right, #272d34, #333 50%, #0fa 75%, #272d34);
-    animation: flicker 1s linear 3;
+    animation: flicker .3s linear 15;
   }
   
   /* Social media icons */
@@ -23,7 +23,7 @@
     flex-direction: row;
     justify-content: center;
     color: #0fa;
-    margin-top: 1%;
+    margin-top: 3%;
     margin-left: 30%;
     margin-right: 30%;
   }
@@ -61,13 +61,13 @@
 
   @keyframes fadeOut {
     from {
-      opacity: .75;
+      /* opacity: 1; */
   
       filter: invert(100%) drop-shadow( 0 04px #fff) drop-shadow(0 0 4px #FFF) drop-shadow(0 0 3px #0fa) drop-shadow(0px 0px 15px #0fa) drop-shadow(0px 0vw 20px #0fa);
     }
     to {
-       opacity: 1;
-        filter: invert(0);
+       /* opacity: 1; */
+        filter: invert(0), drop-shadow(none) ;
     }
   }
   
@@ -98,7 +98,7 @@
   @media (max-width: 480px) {
     /* Adjust styles for phones */
     .social-media-icons {
-      margin: 2% 5%;
+      margin: 5% 5%;
     }
   
     .iconLinks {
