@@ -2,7 +2,7 @@
   "name": "dev_website_portfolio",
   "version": "0.1.0",
   "private": true,  
-  "homepage": "https://tjloughry.com",
+  "homepage": "https://theteejers.github.io/dev_website_portfolio",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.18.9",
     "@react-hook/mouse-position": "^4.1.3",
