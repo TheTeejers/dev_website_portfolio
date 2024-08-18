@@ -5,7 +5,6 @@ import gitHub from '../assets/github.png';
 import faceBook from '../assets/facebook.png';
 import phone from '../assets/phone.png';
 import linkedIn from '../assets/linkedin.png';
-import { Html, Button } from "@react-email/components";
 
 const Footer = (props) => {
   const contact = props.content;
@@ -13,8 +12,6 @@ const Footer = (props) => {
 
   const handleImageHover = (event, icon) => {
     setIsImageHovered(event.type === 'mouseover' ? icon : null);
-    console.log(isImageHovered);
-
   };
 
   return (
@@ -22,7 +19,7 @@ const Footer = (props) => {
       <div className="div-with-bars foot"></div>
       <div className="social-media-icons">
         <a
-          className="iconLinks"
+          className={`iconLinks ${isImageHovered === 'linkedIn' ? 'hovered' : null}`}
           href={contact.linkedIn}
           target="blank"
         >

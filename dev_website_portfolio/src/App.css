@@ -2,16 +2,14 @@
   display: flex;
   justify-content: center;
   height: 100vh;
-  /* flex-direction: row-reverse; */
   font-family: InterVariable;
   animation: fadeIn 2.5s forwards;
   flex-direction: column;
-  /* overflow-y: scroll; */
+  position: absolute;
 }
 
 html,
 body {
-
   background-color: #272d34;
   opacity: .9;
   overflow: hidden;
@@ -25,23 +23,11 @@ body {
   text-transform: uppercase;
   background: #202020;
   color: #eaeaea;
-  /* box-sizing:border-box; */
-  /* margin-top:20px; */
   padding: 10px 40px;
   position: absolute;
   bottom: 1%;
   right: 2%;
-
-  box-shadow:
-    1px 0px 4px #FFF,
-    2px 0px 4px #FFF,
-    3px 0px 4px #FFF,
-    2px 0px 3px #0fa,
-    2px 3px 15px #0fa,
-
-    inset 0 0 .25em #fff,
-    inset 0 0 .51em #fff,
-    inset 0 0 .75em #0fa;
+  box-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, inset 0 0 .25em #fff, inset 0 0 .51em #fff, inset 0 0 .75em #0fa;
 }
 
 .topicSelectedDiv {
@@ -53,23 +39,11 @@ body {
   background-color: black;
   border-radius: 5%;
   z-index: 50;
-  /* padding: 5%; */
   height: 85%;
   width: 75%;
-  box-shadow:
-    1px 0px 4px #FFF,
-    2px 0px 4px #FFF,
-    3px 0px 4px #FFF,
-    2px 0px 3px #0fa,
-    2px 3px 15px #0fa,
-    20px 0vw 200px #0fa,
-    inset 0 0 1em #fff,
-    inset 0 0 2em #fff,
-    inset 0 0 3em #0fa;
+  box-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 200px #0fa, inset 0 0 1em #fff, inset 0 0 2em #fff, inset 0 0 3em #0fa;
   transition: all 1s ease-in-out allow-discrete;
   overflow-y: scroll;
-  scrollbar-color: #007 #bada55;
-  scrollbar-width: thin;
 }
 
 .topicSelectedDiv.show {
@@ -77,7 +51,6 @@ body {
 }
 
 .topicSelectedDiv.hide {
-  /* z-index: -50; */
   transform: translateY(110vh) translateX(110vh);
 }
 
@@ -88,38 +61,16 @@ body {
   overflow-y: scroll;
   border-style: groove;
   border-radius: 5%;
-  box-shadow:
-    1px 0px 4px #FFF,
-    2px 0px 4px #FFF,
-    3px 0px 4px #FFF,
-    2px 0px 3px #0fa,
-    2px 3px 15px #0fa,
-    20px 0vw 200px #0fa;
-  /* display: flex;
-  justify-content: center; */
-
+  box-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 200px #0fa;
 }
 
 .tableOfContents {
   justify-content: center;
-  /* z-index: -200; */
 }
-
-
-
-/* .div-with-bars::before {
-  top: 0;
-}
-
-.div-with-bars::after {
-  bottom: 0;
-} */
-
 
 :root {
   font-family: InterVariable, sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1;
-  /* fix for Chrome */
 }
 
 @supports (font-variation-settings: normal) {
@@ -128,17 +79,12 @@ body {
   }
 }
 
-
-
-
 @keyframes fadeIn {
   from {
-
     opacity: 0;
   }
 
   to {
-
     opacity: 1;
   }
 }
@@ -154,17 +100,10 @@ body {
 }
 
 .transition {
-  /* position:absolute; */
   height: 80%;
   width: 50%;
-  /* background:#d6d6d6;  */
-  /* transform:  translateX(-50px); */
-  /* transition:2s all linear; */
   transition: all 0.5s ease-out allow-discrete;
 }
-
-
-
 
 .anim-trans {
   animation: anim 1s linear;
@@ -173,15 +112,50 @@ body {
 @keyframes anim {
   from {
     position: absolute;
-
     transform: translateY(110vh) translateX(110vh);
+  }
+}
 
+@media (max-width: 768px) {
+
+  /* Tablet breakpoint */
+  .App {
+    overflow: hidden;
   }
 
-  to {
-    /* position:absolute; */
-
-    /* returns the sun to its default position */
-    transform: translateY(0) translateX(0);
+  .topicSelectedDiv {
+    width: 100%;
+    height: 100%;
+    margin: 0;
   }
+
+  .topicContainer {
+    /* Adjust styles for tablets */
+  }
+
+  /* Add more selectors and styles as needed */
+}
+
+@media (max-width: 480px) {
+
+  /* Phone breakpoint */
+  .App {
+    overflow: hidden;
+  }
+
+  .closeTopicButton {
+    /* Adjust styles for phones */
+  }
+
+  .topicSelectedDiv {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .topicContainer {
+    /* Adjust styles for phones */
+  }
+
+  /* Add more selectors and styles as needed */
 }

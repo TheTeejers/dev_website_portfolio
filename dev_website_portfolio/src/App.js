@@ -71,8 +71,7 @@ function App() {
 
       <div className="topicSelectedDiv" style={{ transform: `translate(${translateX}%, ${translateY}%)` }}>
         <button className='closeTopicButton' onClick={resestShowTopic}>close</button>
-        {/* <div>thing {content[0]}</div> */}
-        <div className='topicContainer'>
+           <div className='topicContainer'>
           {
             (() => {
               switch (visibleTopic) {
