@@ -11,8 +11,8 @@ const Education = (props) => {
     
 
     return (
-        <div className='experience'>
-            <h1 className='sectionName'>Education</h1>
+        <div className='topicDiv'>
+            <h1 className='topicTitle'>{education[0].topicTitle}</h1>
 
             {education.map((topicObject, index) => (
                 <div key={index}>

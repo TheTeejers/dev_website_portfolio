@@ -1,30 +1,43 @@
 
 const Content = () => {
 
-    function ExternalLink({ url, text }) {
-        return (
-          <a href={url} target="_blank" rel="noreferrer noopener">
-            {text || url}
-          </a>
-        );
-      }
+    // function ExternalLink({ url, text }) {
+    //     return (
+    //       <a href={url} target="_blank" rel="noreferrer noopener">
+    //         {text || url}
+    //       </a>
+    //     );
+    //   }
 
 
-      function MailtoLink({ email }) {
-        return (
-          <a href={`mailto:${email}`}>
-            {email}
-          </a>
-        );
-      }
+    //   function MailtoLink({ email }) {
+    //     return (
+    //       <a href={`mailto:${email}`}>
+    //         {email}
+    //       </a>
+    //     );
+    //   }
 
-      const contact = {
+    //   const contact = {
+    //     topicTitle: 'Contact Me',
+    //     myName: 'TJ Loughry',
+    //     email: <MailtoLink email="tjloughry@gmail.com" />,
+    //     phone: '512.826.6923',
+    //     gitHub: <ExternalLink url="https://github.com/TheTeejers" text="GitHub" />,
+    //     linkedIn: <ExternalLink url="https://linkedin.com/in/tjloughry" text="LinkedIn" />,
+    //     faceBook: <ExternalLink url="https://www.facebook.com/tj.loughry" text="FaceBook" />,
+
+    // };
+
+    const contact = {
+        topicTitle: 'Contact Me',
         myName: 'TJ Loughry',
-        email: <MailtoLink email="tjloughry@gmail.com" />,
+        email: 'tjloughry@gmail.com',
         phone: '512.826.6923',
-        gitHub: <ExternalLink url="https://github.com/TheTeejers" text="GitHub" />,
-        linkedIn: <ExternalLink url="https://linkedin.com/in/tjloughry" text="LinkedIn" />
-    };
+        gitHub: 'https://github.com/TheTeejers',
+        linkedIn: 'https://linkedin.com/in/tjloughry',
+        faceBook: 'https://www.facebook.com/tj.loughry',
+      };
 
     const tableOfContents = {
         myName: ['T', 'J', 'L', 'ough', 'ry'],
@@ -77,6 +90,7 @@ const Content = () => {
     };
 
     const experience = [
+        {topicTitle: 'Experience'},
         {
             company: 'SubjectWell, Austin, Texas',
             title: 'Associate Software Engineer',
@@ -137,6 +151,7 @@ const Content = () => {
     ];
 
     const education = [
+        {topicTitle: 'Education'},
         {
             school: 'General Assembly, Austin',
             program: 'Web Development Immersive Fellow',

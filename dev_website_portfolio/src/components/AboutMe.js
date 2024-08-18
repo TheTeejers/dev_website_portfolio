@@ -3,9 +3,12 @@ import './TextContent.css';
 
 
 const AboutMeSection = (props, key) => {
-    const bio = props.content; // Access data from props
+    const bio = props.content; 
+    console.log('bio');
+    console.log(bio);
+    
     return (
-        <div className='bio'>
+        <div className='topicDiv'>
             <h1 className='myNameBio'>{bio.myName}</h1>
 
             {bio.aboutMeTopics.map((topicObject, index) => (

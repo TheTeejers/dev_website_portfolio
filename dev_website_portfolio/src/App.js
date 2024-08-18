@@ -8,6 +8,8 @@ import Content from './content/Content.js';
 import ContactSection from './components/Contact.js';
 import Experience from './components/Experience.js';
 import Education from './components/Education.js';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
   const [isTransitionActive, setIsTransitionActive] = useState(false);
 
   function getRandomDigitWithSign() {
-    const randomDigit = Math.floor(Math.random() * 20); // Generate a random digit between 100 and 200
+    const randomDigit = Math.floor(Math.random() * 20) + 150; // Generate a random digit between 100 and 200
     const randomSign = Math.random() < 0.5 ? -1 : 1; // Generate a random sign (-1 or 1)
     return randomDigit * randomSign;
   }
@@ -28,29 +30,29 @@ function App() {
     setIsTransitionActive(!isTransitionActive);
   };
 
-  console.log('translateX');
-  console.log(translateX);
-  console.log('translateY');
-  console.log(translateY);
+  // console.log('translateX');
+  // console.log(translateX);
+  // console.log('translateY');
+  // console.log(translateY);
 
 
   const resestShowTopic = () => {
-    const randomX = getRandomDigitWithSign() + 150;
-    const randomY = getRandomDigitWithSign() * 10; // You can adjust this value as needed
+    const randomX = getRandomDigitWithSign();
+    const randomY = getRandomDigitWithSign(); // You can adjust this value as needed
     setTranslateX(randomX);
     setTranslateY(randomY);
     setIsTransitionActive(!isTransitionActive);
     setTimeout(() => setVisibleTopic(null), 1000);
   }
-console.log(content);
+// console.log(content);
 
   const showTopicClicked = (props) => {
 
 
     setVisibleTopic(Object.keys(props.topicObject)[0])
     setIsTransitionActive(!isTransitionActive);
-    console.log(showTopic);
-    console.log(props);
+    // console.log(showTopic);
+    // console.log(props);
     setTranslateX(0);
     setTranslateY(0);
 
@@ -58,23 +60,26 @@ console.log(content);
   };
   return (
     <div className="App">
+      <Header/>
       <div className='tableOfContents'>
+      
 
 
         <TableOfContents content={content} onTopicClick={showTopicClicked} />
+        
       </div>
 
       <div className="topicSelectedDiv" style={{ transform: `translate(${translateX}%, ${translateY}%)` }}>
         <button className='closeTopicButton' onClick={resestShowTopic}>close</button>
-        <div>{content[0]}</div>
+        {/* <div>thing {content[0]}</div> */}
         <div className='topicContainer'>
           {
             (() => {
               switch (visibleTopic) {
                 case 'aboutMe':
-                  return <AboutMe content={content.aboutMe} key="aboutMe" />;
+                  return <AboutMe content={content.aboutMe} key="key" />;
                 case 'experience':
-                  return <Experience content={content.experience} key="experience" />;
+                  return <Experience content={content.experience} key="key" />;
                 case 'education':
                   return <Education content={content.education} key="education" />;
                 case 'bonus':
@@ -92,6 +97,7 @@ console.log(content);
 
 
       </div>
+      <Footer content={content.contact}/>
     </div>
   );
 }
