@@ -46,15 +46,13 @@ const Footer = (props) => {
         </a>
         <a
           className="iconLinks"
-          href= 'mailto:tjloughry@gmail.com?subject=Message%20from%20TJLoughry.com'
-                 target="blank">
+          href={`mailto:${contact.email}?subject=Message%20from%20TJLoughry.com`}>
           <img
-          
             src={gmail}
             alt="gmail"
             className={`linkedIcons ${isImageHovered === 'gmail' ? 'hovered' : 'unhovered'}`}
             onMouseOver={(e) => handleImageHover(e, 'gmail')}
-            onMouseOut={handleImageHover}
+            onMouseOut={handleImageHover} 
           />
         </a>
         <a
