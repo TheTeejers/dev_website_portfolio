@@ -55,7 +55,7 @@ const Footer = (props) => {
             onMouseOut={handleImageHover} 
           />
         </a>
-        <a
+        {/* <a
           className="iconLinks"
           href={contact.faceBook}
           target="blank"
@@ -67,7 +67,7 @@ const Footer = (props) => {
             onMouseOver={(e) => handleImageHover(e, 'facebook')}
             onMouseOut={handleImageHover}
           />
-        </a>
+        </a> */}
         <a
           className="iconLinks"
           href={`tel: ${contact.phone}`}

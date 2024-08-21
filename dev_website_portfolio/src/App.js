@@ -1,7 +1,7 @@
 import './App.css';
 import '@fontsource-variable/cinzel'
 import { useState } from 'react';
-import TableOfContents from './components/TextContent.js';
+import TableOfContents from './components/TableOfContents.js';
 import Bonus from './components/Bonus.js';
 import AboutMe from './components/AboutMe.js';
 import Content from './content/Content.js';
@@ -18,9 +18,17 @@ function App() {
   const [translateX, setTranslateX] = useState(200);
   const [translateY, setTranslateY] = useState(200);
   const [isTransitionActive, setIsTransitionActive] = useState(false);
+  // const randomX = getRandomDigitWithSign();
+  // const randomY = (getRandomDigitWithSign() > 0 ? getRandomDigitWithSign() - 150 : getRandomDigitWithSign() + 150) ;
 
-  function getRandomDigitWithSign() {
-    const randomDigit = Math.floor(Math.random() * 20) + 150; // Generate a random digit between 100 and 200
+  function getRandomXDigitWithSign() {
+    const randomDigit = Math.floor(Math.random() * 100) + 100; // Generate a random digit between 0 and 200
+    const randomSign = Math.random() < 0.5 ? -1 : 1; // Generate a random sign (-1 or 1)
+    return randomDigit * randomSign;
+  }
+
+  function getRandomYDigitWithSign() {
+    const randomDigit = Math.floor(Math.random() * 100); // Generate a random digit between 0 and 200
     const randomSign = Math.random() < 0.5 ? -1 : 1; // Generate a random sign (-1 or 1)
     return randomDigit * randomSign;
   }
@@ -29,22 +37,18 @@ function App() {
 
   // console.log('translateX');
   // console.log(translateX);
-  // console.log('translateY');
-  // console.log(translateY);
+  console.log('translateY');
+  console.log(visibleTopic);
 
 
   const resestShowTopic = () => {
-    const randomX = getRandomDigitWithSign();
-    const randomY = (getRandomDigitWithSign() > 0 ? getRandomDigitWithSign() - 150 : getRandomDigitWithSign() + 150) ; // You can adjust this value as needed
 
-    console.log(randomX, randomY);
-    
-    setTranslateX(randomX);
-    setTranslateY(randomY);
+    setTranslateX(getRandomXDigitWithSign);
+    setTranslateY(getRandomYDigitWithSign);
     setIsTransitionActive(!isTransitionActive);
     setTimeout(() => setVisibleTopic(null), 1000);
   }
-// console.log(content);
+  // console.log(content);
 
   const showTopicClicked = (props) => {
 
@@ -60,23 +64,31 @@ function App() {
   };
   return (
     <div className="App">
-      <Header/>
-      <div className='tableOfContents'>
-      
+      <Header />
+      <TableOfContents content={content} onTopicClick={showTopicClicked} />
+      <Footer content={content.contact} />
 
 
-        <TableOfContents content={content} onTopicClick={showTopicClicked} />
-        
-      </div>
-
-      <div className="topicSelectedDiv" style={{ transform: `translate(${translateX}%, ${translateY}%)` }}>
+      <div className={`topicSelectedDiv ${(visibleTopic === null ? 'fadeOut' : 'fadeIn')}`}
+        style={{
+          transform: `translate(${translateX}vw, ${translateY}vh)`,
+        }}>
         <button className='closeTopicButton' onClick={resestShowTopic}>close</button>
-           <div className='topicContainer'>
+        <div className='topicContainer' >
           {
             (() => {
+              console.log("here we are");
+
+              console.log(content[visibleTopic]);
+              console.log('visibleTopic');
+              console.log(visibleTopic);
+
               switch (visibleTopic) {
+
                 case 'aboutMe':
-                  return <AboutMe content={content.aboutMe} key="key" />;
+
+
+                  return <AboutMe content={content[visibleTopic]} key="key" />;
                 case 'experience':
                   return <Experience content={content.experience} key="key" />;
                 case 'education':
@@ -92,11 +104,6 @@ function App() {
           }
         </div>
       </div>
-      <div>
-
-
-      </div>
-      <Footer content={content.contact}/>
     </div>
   );
 }

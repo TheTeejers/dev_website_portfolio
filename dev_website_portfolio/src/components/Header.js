@@ -3,7 +3,10 @@ import './HeaderFooter.css';
 
 const Header = () => {
   return (
-    <div className="div-with-bars head"></div>
+    <header>
+<div className="div-with-bars head"></div>
+    </header>
+    
   );
 };
 
