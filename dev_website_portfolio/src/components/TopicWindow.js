@@ -28,7 +28,7 @@ const TopicWindow = (props) => {
     }
 
     return (
-        <div className={`topicSelectedDiv ${props.visibleTopic !== null ? 'fadeIn' : 'fadeOut'}`}
+        <div className={`topicSelectedDiv `}
             style={{
                 transform: `translate(${translateX}vw, ${translateY}vh)`,
             }}>
