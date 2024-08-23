@@ -43,7 +43,7 @@ const TableOfContents = (props) => {
                 {content.selfTopics.map((topicObject, index) => (
                     <p
                         key={index}
-                        className={`chapters ${hoveredIndex === index && startBlank !== null ? 'hovered' : (hoveredIndex === index && startBlank === null ? startBlank : null)}`}
+                        className={`chapters ${hoveredIndex === index ? 'hovered' : startBlank}`}
                         onMouseOver={() => handleHover(index, true)}
                         onMouseOut={() => handleHover(index, false)}
                         onClick={() => handleClick(topicObject, index)}

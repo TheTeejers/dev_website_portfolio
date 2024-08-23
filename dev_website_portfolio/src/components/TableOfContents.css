@@ -98,14 +98,16 @@
 }
 
 .chapters.hovered {
+  z-index: 500;
+  /* color: #fff; */
   text-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 200px #0fa;
 
   filter: drop-shadow(2px 0px 4px #fff) drop-shadow(3px 0px 4px #FFF) drop-shadow(2px 0px 3px #0fa) drop-shadow(2px 3px 15px #0fa) drop-shadow(20px 0vw 200px #0fa);
 }
 
 .chapters.unhovered {
-
-  animation: fadeOutChapter 2s forwards;
+color: #fff;
+  animation: fadeOutChapter 1s forwards;
 }
 
 .spanBar {
@@ -174,13 +176,15 @@
 
 @keyframes fadeOutChapter {
   from {
+    color: #4e4b4b;
+    filter: drop-shadow(2px 0px 4px #fff) drop-shadow(3px 0px 4px #FFF) drop-shadow(2px 0px 3px #0fa) drop-shadow(2px 3px 15px #0fa) drop-shadow(20px 0vw 200px #0fa);
 
-    text-shadow: 0 0 .5em #fff, 0 0 .6em #fff, 0 0 .75em #0fa;
+    text-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 200px #0fa;
   }
 
   to {
     /* color: #9a959a; */
-
+    filter: none;
     color: #000;
     text-shadow: 0;
   }
