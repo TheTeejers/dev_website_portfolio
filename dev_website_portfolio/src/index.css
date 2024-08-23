@@ -5,9 +5,42 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+@font-face {
+  font-family: 'Bungee_Outline';
+  src: url('./assets/Bungee_Outline/BungeeOutline-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bungee_Hairline';
+  src: url('./assets/Bungee-fonts/Bungee_Basic/BungeeHairline-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bungee_Regular';
+  src: url('./assets/Bungee-fonts/Bungee_Basic/Bungee-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bungee_Shade';
+  src: url('./assets/Bungee-fonts/Bungee_Basic/BungeeShade-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-MediumItalic';
+  src: url('./assets/Poppins/Poppins-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-SemiBoldItalic';
+  src: url('./assets/Poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
 }

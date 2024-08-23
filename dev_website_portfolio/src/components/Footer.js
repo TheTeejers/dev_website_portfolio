@@ -7,6 +7,8 @@ import phone from '../assets/phone.png';
 import linkedIn from '../assets/linkedin.png';
 
 const Footer = (props) => {
+
+
   const contact = props.content;
   const [isImageHovered, setIsImageHovered] = useState(null);
 
@@ -15,11 +17,11 @@ const Footer = (props) => {
   };
 
   return (
-    <footer>
+    <footer style={{ pointerEvents: `${props.visibleTopic !== null ? 'none' : 'auto'}` }}>
       <div className="div-with-bars foot"></div>
       <div className="social-media-icons">
         <a
-          className={`iconLinks ${isImageHovered === 'linkedIn' ? 'hovered' : null}`}
+          className="iconLinks linkedIn"
           href={contact.linkedIn}
           target="blank"
         >
@@ -33,7 +35,7 @@ const Footer = (props) => {
         </a>
 
         <a
-          className="iconLinks"
+          className="iconLinks github"
           href={contact.gitHub}
           target="blank">
           <img
@@ -45,14 +47,14 @@ const Footer = (props) => {
           />
         </a>
         <a
-          className="iconLinks"
+          className="iconLinks gmail"
           href={`mailto:${contact.email}?subject=Message%20from%20TJLoughry.com`}>
           <img
             src={gmail}
             alt="gmail"
             className={`linkedIcons ${isImageHovered === 'gmail' ? 'hovered' : 'unhovered'}`}
             onMouseOver={(e) => handleImageHover(e, 'gmail')}
-            onMouseOut={handleImageHover} 
+            onMouseOut={handleImageHover}
           />
         </a>
         {/* <a
@@ -69,7 +71,7 @@ const Footer = (props) => {
           />
         </a> */}
         <a
-          className="iconLinks"
+          className="iconLinks phone"
           href={`tel: ${contact.phone}`}
           target="blank">
           <img

@@ -4,9 +4,9 @@ import './HeaderFooter.css';
 const Header = () => {
   return (
     <header>
-<div className="div-with-bars head"></div>
+      <div className="div-with-bars head"></div>
     </header>
-    
+
   );
 };
 

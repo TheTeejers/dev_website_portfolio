@@ -3,7 +3,6 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  font-family: InterVariable;
   animation: fadeIn 2.5s forwards;
   flex-direction: column;
   overflow: hidden;
@@ -44,21 +43,23 @@ body {
   height: 85%;
   width: 75%;
   box-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 200px #0fa, inset 0 0 1em #fff, inset 0 0 2em #fff, inset 0 0 3em #0fa;
-  transition: all 1s ease-in-out allow-discrete;
+  transition: all .75s ease-in-out;
   overflow: hidden;
 }
 
-.topicContainer {
-  margin: 2%;
-  height: 90%;
-  width: 95%;
-  overflow-y: scroll;
-  border-style: groove;
-  border-radius: 5%;
-  box-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 200px #0fa;
+.topicSelectedDiv.fadeIn {
+  animation: fadeIn 1.5s forwards;
+}
+.topicSelectedDiv.fadeOut {
+  animation: fadeOut .5s forwards;
 }
 
 
+
+/* @font-face {
+  font-family: 'YourFontName';
+  src: url('./fonts/YourFontName.ttf') format('truetype');
+} */
 
 :root {
   font-family: InterVariable, sans-serif;
@@ -94,7 +95,7 @@ body {
 .transition {
   height: 80%;
   width: 50%;
-  transition: all 0.5s ease-out allow-discrete;
+  /* transition: all .75s ease-in-out allow-discrete; */
 }
 
 .anim-trans {

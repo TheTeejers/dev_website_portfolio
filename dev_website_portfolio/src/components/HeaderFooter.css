@@ -25,6 +25,7 @@
 
 footer {
     height: 11vh;
+    
 }
 
 header {
@@ -68,7 +69,7 @@ img.linkedIcons.hovered {
 img.linkedIcons.unhovered {
 
 
-    animation: fadeOut 1s;
+    animation: fadeOutIcon 1s;
 }
 
 .linkedIcons {
@@ -78,9 +79,15 @@ img.linkedIcons.unhovered {
 
 }
 
+.iconLinks.gmail, .iconLinks.phone {
+    display: none;
+} 
+
+
+
 /* Animations */
 
-@keyframes fadeOut {
+@keyframes fadeOutIcon {
     from {
         /* opacity: 1; */
 
@@ -118,28 +125,22 @@ img.linkedIcons.unhovered {
 
 /* Media Queries for Responsiveness */
 
-@media (max-width: 820px) {
+@media (max-width: 1024px) {
     /* Adjust styles for tablets */
-    /* .social-media-icons {
-      margin: 2% 10%;
-    } */
-    /*   
-    .iconLinks {
-      width: 33.33%;
-    } */
+
+     .iconLinks.gmail {
+        display: flex; 
+    } 
 
 
 }
 
 @media (max-width: 480px) {
     /* Adjust styles for phones */
-    /* .social-media-icons {
-      margin: 5% 5%;
-    } */
 
-    /* .iconLinks {
-      width: 50%;
-    } */
+    .iconLinks.phone{
+        display: flex; 
+    } 
 
 
 }

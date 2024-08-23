@@ -1,34 +1,6 @@
 
 const Content = () => {
 
-    // function ExternalLink({ url, text }) {
-    //     return (
-    //       <a href={url} target="_blank" rel="noreferrer noopener">
-    //         {text || url}
-    //       </a>
-    //     );
-    //   }
-
-
-    //   function MailtoLink({ email }) {
-    //     return (
-    //       <a href={`mailto:${email}`}>
-    //         {email}
-    //       </a>
-    //     );
-    //   }
-
-    //   const contact = {
-    //     topicTitle: 'Contact Me',
-    //     myName: 'TJ Loughry',
-    //     email: <MailtoLink email="tjloughry@gmail.com" />,
-    //     phone: '512.826.6923',
-    //     gitHub: <ExternalLink url="https://github.com/TheTeejers" text="GitHub" />,
-    //     linkedIn: <ExternalLink url="https://linkedin.com/in/tjloughry" text="LinkedIn" />,
-    //     faceBook: <ExternalLink url="https://www.facebook.com/tj.loughry" text="FaceBook" />,
-
-    // };
-
     const contact = {
         topicTitle: 'Contact Me',
         myName: 'TJ Loughry',
@@ -52,7 +24,7 @@ const Content = () => {
         ],
     };
 
-    const helloWorld = {
+    const bonus = {
         title: 'Hello World!!!',
         paragraphs: [
             <>I'd love to share a bit more about my background and interests outside of work. Aside from being passionate about web development, I'm also an avid woodworker. There's something incredibly satisfying about taking raw materials and transforming them into something both functional and beautiful. This hobby has taught me a lot about patience, precision, and the importance of planning ahead, which I find translates really well into my coding projects.</>,
@@ -67,11 +39,11 @@ const Content = () => {
 
 
     const aboutMe = {
-        myName: 'TJ Loughry',
+        title: 'About Me',
 
 
         aboutMeTopics: [
-            { 'About Me': <>Hey there! I'm T.J. Loughry, a Front-End Web Developer and Automation Testing Support Engineer based in Austin, Texas. I love creating user-friendly web applications and solving tricky tech problems.</> },
+            { '': `Hey there! I'm TJ Loughry, a Front-End Web Developer and Automation Testing Support Engineer based in Austin, Texas. I love creating user-friendly web applications and solving tricky tech problems.` },
             { 'What I Do': <>At SubjectWell, I've tackled a ton of website issues, helped move our database to AWS, and made sure everything runs smoothly by keeping an eye on our Step and Lambda functions. Before that, at Sauce Labs, I helped customers with their Selenium/Appium testing, wrote helpful documentation, and managed the support queue. I even took on the role of Austin Office Lead/Manager, where I helped set up our office space and organized team events.</> },
             { 'My Skills': <>I'm skilled in HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, Python, Selenium, Appium, Vue.js, and Rails. I’ve got a knack for reviewing code, fixing issues, and making databases work better.</> },
             { 'My Background': <>I studied Accounting at Midwestern State University and got an Associate of Science in Mathematics from Austin Community College. I also completed a Web Development Immersive program at General Assembly in Austin.</> },
@@ -153,7 +125,7 @@ const Content = () => {
     const education = [
         {topicTitle: 'Education'},
         {
-            school: 'General Assembly, Austin',
+            school: 'General Assembly, Austin, Texas',
             program: 'Web Development Immersive Fellow',
             degree: 'Course Certificate',
             details: 'Completed an intensive, hands-on program focused on full-stack web development, covering HTML, CSS, JavaScript, React, Node.js, and more.'
@@ -179,7 +151,7 @@ const Content = () => {
     ];
 
 
-    return { tableOfContents, helloWorld, aboutMe, experience, contact, education };
+    return { tableOfContents, bonus, aboutMe, experience, contact, education };
 };
 
 export default Content;
