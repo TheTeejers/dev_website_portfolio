@@ -27,7 +27,13 @@
 }
 
 
-
+.contactIcons {
+  filter: drop-shadow(2px 0px 4px #fff) drop-shadow(2px 0px 3px #0fa);
+  justify-content: center;
+  height: 6vh;
+  width: 6vh;
+  
+}
 
 
 
@@ -35,13 +41,14 @@
 
 
 .imageCover {
-  width: 25em;
-  height: 25em;
+  width: 25vh;
+  /* height: 25vh; */
   border-radius: 5%;
   object-fit: cover;
-  left: 50%;
-  width: 20%;
-  height: 20%;
+  margin: auto;
+  padding: auto;
+  filter: drop-shadow(2px 0px 4px #fff) drop-shadow(2px 0px 3px #0fa);
+
 }
 
 .topicContainer {
@@ -73,13 +80,9 @@ a {
 .topicTitle {
   text-align: right;
   font-family: Bungee_Shade;
-  color: #0fa;
-  font-size: 6em;
-  text-shadow:
-    0 0 .05em #fff,
-    /* 0 0 .5em #0fa, */
-    0 0 .2em #0fa,
-    -2em 0.25em 1em #0fa;
+  color: #000;
+  font-size: 5vh;
+  text-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 20px #0fa, -2em 0.25em 1em #0fa;
 }
 
 .indented-paragraph {
@@ -90,9 +93,10 @@ a {
 }
 
 .paragraph-sections{
-  font-family: Bungee_Outline;
-  color: #0fa;
+  font-family: Bungee_Shade;
+  color: #000;
   font-size: 2em;
+  text-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 20px #0fa, -2em 0.25em 1em #0fa;
 }
 
 .paragraph-subsections{
@@ -106,3 +110,10 @@ a {
   font-family: Poppins-SemiBoldItalic;
 
 }
+
+.linkedText {
+  font-family: 'Poppins-SemiBoldItalic';
+  justify-items: auto;
+  
+}
+

@@ -51,7 +51,7 @@ header {
     width: 20vh;
     margin: 0;
     /* filter: grayscale(.5) */
-    filter: drop-shadow(2px 0px 4px #fff) drop-shadow(2px 0px 3px #0fa);
+    filter: drop-shadow(2px 0px 4px #fff) drop-shadow(2px 0px 3px #0fa) drop-shadow(-2em 0.25em 1em #0fa);
     /* margin: 3% 10% 3vh 10%; */
     
 }
@@ -89,13 +89,13 @@ img.linkedIcons.unhovered {
 
 @keyframes fadeOutIcon {
     from {
-        /* opacity: 1; */
+
 
         filter: invert(100%) drop-shadow(0 04px #fff) drop-shadow(0 0 4px #FFF) drop-shadow(0 0 3px #0fa) drop-shadow(0px 0px 15px #0fa) drop-shadow(0px 0vw 20px #0fa);
     }
 
     to {
-        /* opacity: 1; */
+
         filter: invert(0), drop-shadow(none);
     }
 }

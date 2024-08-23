@@ -27,7 +27,8 @@ const Content = () => {
     const bonus = {
         title: 'Hello World!!!',
         paragraphs: [
-            <>I'd love to share a bit more about my background and interests outside of work. Aside from being passionate about web development, I'm also an avid woodworker. There's something incredibly satisfying about taking raw materials and transforming them into something both functional and beautiful. This hobby has taught me a lot about patience, precision, and the importance of planning ahead, which I find translates really well into my coding projects.</>,
+            <>I'd love to share a bit more about my background and interests outside of work. Aside from being passionate about web development, I'm also an avid woodworker. When I'm not coding, you'll probably find me in my workshop. </>,
+            <>Woodworking is a big passion of mine—it's taught me patience, precision, and how to plan ahead. These skills come in handy when I'm working on web projects, helping me create well-thought-out and detailed applications.  There's something incredibly satisfying about taking raw materials and transforming them into something both functional and beautiful. This hobby has taught me a lot about patience, precision, and the importance of planning ahead, which I find translates really well into my coding projects.</>,
 
             <>When I'm working on a coding project, I often think about it in the same way I do a woodworking piece. I envision the final product, plan out how all the parts will come together, and pay close attention to the details to ensure everything fits perfectly. This mindset helps me write clean, efficient code and design intuitive user interfaces.</>,
 
@@ -47,16 +48,7 @@ const Content = () => {
             { 'What I Do': <>At SubjectWell, I've tackled a ton of website issues, helped move our database to AWS, and made sure everything runs smoothly by keeping an eye on our Step and Lambda functions. Before that, at Sauce Labs, I helped customers with their Selenium/Appium testing, wrote helpful documentation, and managed the support queue. I even took on the role of Austin Office Lead/Manager, where I helped set up our office space and organized team events.</> },
             { 'My Skills': <>I'm skilled in HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, Python, Selenium, Appium, Vue.js, and Rails. I’ve got a knack for reviewing code, fixing issues, and making databases work better.</> },
             { 'My Background': <>I studied Accounting at Midwestern State University and got an Associate of Science in Mathematics from Austin Community College. I also completed a Web Development Immersive program at General Assembly in Austin.</> },
-            { 'Fun Fact': <>When I'm not coding, you'll probably find me in my workshop. Woodworking is a big passion of mine—it's taught me patience, precision, and how to plan ahead. These skills come in handy when I'm working on web projects, helping me create well-thought-out and detailed applications.</> },
-            {
-                'Let\'s Connect': (
-                  <>
-                    Feel free to drop me an email at: {contact.email}
-                    , connect with me on {contact.linkedIn}, or check out my projects on:
-                    {contact.gitHub}
-                  </>
-                ),
-              },
+  
 
         ],
     };
