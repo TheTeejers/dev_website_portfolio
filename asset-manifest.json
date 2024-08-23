@@ -1,21 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.39dd1aee.css",
-    "main.js": "/static/js/main.7061e078.js",
+    "main.css": "/static/css/main.71d8801b.css",
+    "main.js": "/static/js/main.6a97997b.js",
     "static/js/453.4a8da189.chunk.js": "/static/js/453.4a8da189.chunk.js",
     "static/media/selfie_pic.jpg": "/static/media/selfie_pic.74a3cbfe9afdadb317eb.jpg",
+    "static/media/BungeeShade-Regular.ttf": "/static/media/BungeeShade-Regular.a890cfb200bc6ce4e602.ttf",
+    "static/media/BungeeOutline-Regular.ttf": "/static/media/BungeeOutline-Regular.6cc193f985a14acb30fc.ttf",
+    "static/media/Poppins-MediumItalic.ttf": "/static/media/Poppins-MediumItalic.89e040c6a64d18f620dc.ttf",
+    "static/media/Poppins-SemiBoldItalic.ttf": "/static/media/Poppins-SemiBoldItalic.3524ffc3226f4578e5c5.ttf",
+    "static/media/Bungee-Regular.ttf": "/static/media/Bungee-Regular.5bcf22f56851653bae6b.ttf",
+    "static/media/BungeeHairline-Regular.ttf": "/static/media/BungeeHairline-Regular.f26239c3b841c91e47fb.ttf",
     "static/media/cinzel-latin-wght-normal.woff2": "/static/media/cinzel-latin-wght-normal.aee96ba28632614d5268.woff2",
     "static/media/cinzel-latin-ext-wght-normal.woff2": "/static/media/cinzel-latin-ext-wght-normal.92e2b3cb90332908e3e8.woff2",
     "static/media/github.png": "/static/media/github.13e71e6bc07bc7e1b3e6.png",
     "static/media/phone.png": "/static/media/phone.4503dbc5639d347d5c04.png",
     "static/media/gmail.png": "/static/media/gmail.9246cd2ee0142c16924a.png",
     "index.html": "/index.html",
-    "main.39dd1aee.css.map": "/static/css/main.39dd1aee.css.map",
-    "main.7061e078.js.map": "/static/js/main.7061e078.js.map",
+    "main.71d8801b.css.map": "/static/css/main.71d8801b.css.map",
+    "main.6a97997b.js.map": "/static/js/main.6a97997b.js.map",
     "453.4a8da189.chunk.js.map": "/static/js/453.4a8da189.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39dd1aee.css",
-    "static/js/main.7061e078.js"
+    "static/css/main.71d8801b.css",
+    "static/js/main.6a97997b.js"
   ]
 }
