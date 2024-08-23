@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.71d8801b.css",
-    "main.js": "/static/js/main.6a97997b.js",
-    "static/js/453.4a8da189.chunk.js": "/static/js/453.4a8da189.chunk.js",
+    "main.css": "/static/css/main.0bde45b5.css",
+    "main.js": "/static/js/main.95bfb58d.js",
     "static/media/selfie_pic.jpg": "/static/media/selfie_pic.74a3cbfe9afdadb317eb.jpg",
     "static/media/BungeeShade-Regular.ttf": "/static/media/BungeeShade-Regular.a890cfb200bc6ce4e602.ttf",
     "static/media/BungeeOutline-Regular.ttf": "/static/media/BungeeOutline-Regular.6cc193f985a14acb30fc.ttf",
@@ -16,12 +15,11 @@
     "static/media/phone.png": "/static/media/phone.4503dbc5639d347d5c04.png",
     "static/media/gmail.png": "/static/media/gmail.9246cd2ee0142c16924a.png",
     "index.html": "/index.html",
-    "main.71d8801b.css.map": "/static/css/main.71d8801b.css.map",
-    "main.6a97997b.js.map": "/static/js/main.6a97997b.js.map",
-    "453.4a8da189.chunk.js.map": "/static/js/453.4a8da189.chunk.js.map"
+    "main.0bde45b5.css.map": "/static/css/main.0bde45b5.css.map",
+    "main.95bfb58d.js.map": "/static/js/main.95bfb58d.js.map"
   },
   "entrypoints": [
-    "static/css/main.71d8801b.css",
-    "static/js/main.6a97997b.js"
+    "static/css/main.0bde45b5.css",
+    "static/js/main.95bfb58d.js"
   ]
 }
