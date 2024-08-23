@@ -51,7 +51,7 @@ header {
     width: 20vh;
     margin: 0;
     /* filter: grayscale(.5) */
-    filter: drop-shadow(2px 0px 4px #fff) drop-shadow(2px 0px 3px #0fa) drop-shadow(-2em 0.25em 1em #0fa);
+    filter: drop-shadow(2px 0px 4px #fff) drop-shadow(2px 0px 3px #0fa) ;
     /* margin: 3% 10% 3vh 10%; */
     
 }
