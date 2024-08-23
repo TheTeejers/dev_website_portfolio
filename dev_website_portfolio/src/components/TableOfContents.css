@@ -1,0 +1,350 @@
+.tableOfContents {
+  animation: fadeInChapter 0.4s forwards;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 15;
+  height: 75vh;
+  text-shadow: 0 0 2px #fff, 0 0 .05em #fff, 0 0 .1em #fff, 0 0 .2em #0fa;
+
+
+}
+
+.myNameContainer {
+  width: 100vw;
+  height: 30vh;
+    /* animation: fadeInName .25s linear 8, fadeInName .1s linear 2, fadeInName .05s linear 25, fadeInName .1s linear 4, fadeInName .1s linear 2, fadeInName .05s linear 10; */
+   
+}
+
+.myName {
+  z-index: 150;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-family: "Monoton", sans-serif; */
+  font-family: Bungee_Shade, sans-serif;
+
+  /* animation: fadeInName .25s linear 8, fadeInName .1s linear 2, fadeInName .05s linear 25, fadeInName .1s linear 4, fadeInName .1s linear 2, fadeInName .05s linear 10; */
+  line-height: 1;
+  font-size: 14vh;
+  font-weight: 100;
+  letter-spacing: 8px;
+  text-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 200px #0fa;
+
+  margin: 0;
+}
+
+.workTitles {
+  font-family: Bungee_Shade, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* height: auto; */
+  height: 10vh;
+  width: 100vw;
+  margin-top: 2vh;
+}
+
+.workTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* font-family: 'Cinzel Variable', serif; */
+  width: 30vw;
+  font-size: 3vh;
+  text-align: center;
+
+  margin-top: 0;
+
+}
+
+.workTitle.w0 {
+  animation: flicker .5s linear 8, flicker 2s linear 2;
+}
+
+.workTitle.w1 {
+  animation: flicker .25s linear 8, flicker 1s linear 3;
+}
+
+.workTitle.w2 {
+  animation: flicker 1s linear 2, flicker 3s linear 2;
+}
+
+.chapterList {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* height: auto; */
+
+}
+
+.chapters {
+
+  display: flex;
+  justify-content: center;
+  font-size: 2vw;
+  font-weight: bold;
+  font-family: Bungee_Shade, sans-serif;
+  line-height: 1;
+  cursor: pointer;
+  margin: 1vh;
+  width: auto
+}
+
+.chapters.hovered {
+  text-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 200px #0fa;
+
+  filter: drop-shadow(2px 0px 4px #fff) drop-shadow(3px 0px 4px #FFF) drop-shadow(2px 0px 3px #0fa) drop-shadow(2px 3px 15px #0fa) drop-shadow(20px 0vw 200px #0fa);
+}
+
+.chapters.unhovered {
+
+  animation: fadeOutChapter 2s forwards;
+}
+
+.spanBar {
+  justify-content: center;
+  display: block;
+  height: 9px;
+  width: 5em;
+  border-radius: 20px;
+  margin-top: .5em;
+  box-shadow: none;
+  opacity: 0;
+  animation: fadeOutBar;
+  /* animation: fadeOutBar 1s forwards; */
+}
+
+.spanBar.hovered.left {
+  animation: fadeInBar 0.55s forwards, flicker .3s linear 14, fadeInBarLeft .25s forwards;
+}
+
+.spanBar.hovered.right {
+  animation: fadeInBar 0.55s forwards, flicker .3s linear 14, fadeInBarRight .25s forwards;
+}
+
+.spanBar.unhovered.left {
+  animation: fadeOutBar 1s forwards, fadeOutBarLeft .75s forwards;
+}
+
+
+.spanBar.unhovered.right {
+  animation: fadeOutBar 1s forwards, fadeOutBarRight 1s forwards;
+}
+
+.flicker0 {
+  animation: flicker 2s linear 1;
+}
+
+.flicker1 {
+  animation: flicker 5s linear 1;
+}
+
+.flicker2 {
+  animation: flicker .5s linear 4;
+}
+
+.flicker3 {
+  animation: flicker 1.5s linear 2;
+}
+
+/* Keyframes */
+@keyframes fadeInName {
+  0% {
+    color: #000;
+    text-shadow: none;
+  }
+
+  50% {
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa;
+  }
+
+  100% {
+    color: #000;
+    text-shadow: none;
+  }
+}
+
+@keyframes fadeOutChapter {
+  from {
+
+    text-shadow: 0 0 .5em #fff, 0 0 .6em #fff, 0 0 .75em #0fa;
+  }
+
+  to {
+    /* color: #9a959a; */
+
+    color: #000;
+    text-shadow: 0;
+  }
+}
+
+@keyframes fadeInBarLeft {
+  from {
+    opacity: 0;
+    transform: translate(-5em);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeOutBarLeft {
+  from {
+    opacity: 1;
+    transform: translate(0em);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-5em);
+  }
+}
+
+@keyframes fadeInBarRight {
+  from {
+    opacity: 0;
+    transform: translate(5em);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeOutBarRight {
+  from {
+    opacity: 1;
+    transform: translate(0em);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(5em);
+  }
+}
+
+@keyframes fadeInBar {
+  from {
+    opacity: 0;
+    box-shadow: none;
+  }
+
+  to {
+    opacity: 1;
+    box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, inset 0 0 .05em #fff, inset 0 0 .5em #fff, inset 0 0 .1rem #0fa;
+  }
+}
+
+@keyframes fadeOutBar {
+  from {
+    opacity: 1;
+    box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, inset 0 0 .05em #fff, inset 0 0 .5em #fff, inset 0 0 .1em #0fa;
+  }
+
+  to {
+    opacity: 0;
+    box-shadow: none;
+  }
+}
+
+@keyframes flicker {
+
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: .99;
+    color: #fff;
+  }
+
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    box-shadow: none;
+    /* opacity: 0.5; */
+    color: #000;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+
+  /* Tablet breakpoint */
+  .myName {
+    font-size: 11vh;
+  }
+
+
+  .chapters {
+    color: #fff;
+    font-size: 4.5vw;
+    /* text-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 200px #0fa; */
+
+    line-height: 1;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  /* Mobile breakpoint */
+  /* .myName.last {
+  
+      width: 100vw;
+  
+    } */
+
+  .myName {
+    font-size: 14vw
+  }
+
+  .workTitle {
+    font-size: 2vh;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .chapters {
+    color: #000;
+    font-size: 4.5vw;
+    /* text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa; */
+    line-height: 1;
+    text-shadow: 0 0 2px #fff, 0 0 .05em #fff, 0 0 .1em #fff, 0 0 .2em #0fa;
+
+
+  }
+
+  .workTitles {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .myNameContainer {
+    height: auto;
+  }
+
+
+
+
+
+
+}
