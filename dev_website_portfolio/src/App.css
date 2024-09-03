@@ -7,12 +7,16 @@
   flex-direction: column;
   overflow: hidden;
   position: absolute;
-  
+
 }
+
+
 
 html,
 body {
   background-color: #272d34;
+
+
   /* opacity: .9; */
 }
 
@@ -50,6 +54,7 @@ body {
 .topicSelectedDiv.fadeIn {
   animation: fadeIn 1.5s forwards;
 }
+
 .topicSelectedDiv.fadeOut {
   animation: fadeOut .5s forwards;
 }
@@ -111,6 +116,7 @@ body {
 
 /* Improved media queries */
 @media (max-width: 1024px) {
+
   /* Tablet breakpoint */
   .topicSelectedDiv {
     width: 90%;
@@ -120,11 +126,30 @@ body {
 }
 
 @media (max-width: 768px) {
+
   /* Phone breakpoint */
   .topicSelectedDiv {
     width: 100%;
     height: 90%;
     margin: 0;
   }
+
   /* Additional adjustments for smaller screens */
+}
+
+
+
+.neon {
+  &.App {
+    animation: fadeIn 1s forwards;
+    color: darkgoldenrod;
+    background-color: hotpink;
+    
+  }
+
+  .closeTopicButton {
+    background: purple;
+      }
+
+
 }

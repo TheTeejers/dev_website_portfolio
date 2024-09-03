@@ -1,4 +1,4 @@
-import '../App.css';
+
 import '@fontsource-variable/cinzel'
 import { useState, useEffect } from 'react';
 
@@ -9,7 +9,6 @@ import Topic from './Topic.js';
 const TopicWindow = (props) => {
     const [translateX, setTranslateX] = useState(150);
     const [translateY, setTranslateY] = useState(150);
-    console.log(props);
 
 
     useEffect(() => {

@@ -1,5 +1,3 @@
-import '../App.css';
-import '@fontsource-variable/cinzel'
 import './TextContent.css';
 import TJSelfie from '../assets/selfie_pic.jpg';
 import gmail from '../assets/gmail.png';
@@ -7,10 +5,13 @@ import gitHub from '../assets/github.png';
 import faceBook from '../assets/facebook.png';
 import phone from '../assets/phone.png';
 import linkedIn from '../assets/linkedin.png';
+import ContactForm from './ContactForm';
+
 
 const Topic = (props) => {
-    console.log('Topic Props');
-    console.log(props);
+    // console.log('props');
+    // console.log(props);
+
 
 
     return (
@@ -95,54 +96,60 @@ const Topic = (props) => {
                         case 'contact':
                             return (
                                 <div className='topicDiv'>
+
                                     <h1 className='topicTitle'>{props.data.topicTitle}</h1>
-                                    <h2 className='paragraph-sections'>{props.data.myName}</h2>
-                                    <h3>
-                                        <a
-                                            className='linkedText'
-                                            href={`tel: ${props.data.phone}`}
-                                            target="blank">         <img
-                                                src={phone}
-                                                alt="Phone"
-                                                className={`contactIcons`}
+                                    <div className='contactPage'>
+                                        <div className='contactLinks'>
+                                            <h2 className='paragraph-sections'>{props.data.myName}</h2>
+                                            <h3>
+                                                <a
+                                                    className='linkedText'
+                                                    href={`tel: ${props.data.phone}`}
+                                                    target="blank">         <img
+                                                        src={phone}
+                                                        alt="Phone"
+                                                        className={`contactIcons`}
 
-                                            />{props.data.phone}</a>
-                                    </h3>
-                                    <h3>
-                                        <a className="linkedText"
-                                            href={`mailto:${props.data.email}`}
-                                            target="blank">         <img
-                                                src={gmail}
-                                                alt="gmail"
-                                                className={`contactIcons`}
+                                                    />{props.data.phone}</a>
+                                            </h3>
+                                            <h3>
+                                                <a className="linkedText"
+                                                    href={`mailto:${props.data.email}`}
+                                                    target="blank">         <img
+                                                        src={gmail}
+                                                        alt="gmail"
+                                                        className={`contactIcons`}
 
-                                            />tjloughry@gmail.com</a>
-                                    </h3>
-                                    <h3>
+                                                    />tjloughry@gmail.com</a>
+                                            </h3>
+                                            <h3>
 
-                                        <a
-                                            className="linkedText"
-                                            href={props.data.gitHub}>
-                                            <img
-                                                src={gitHub}
-                                                alt="GitHub"
-                                                className={`contactIcons`}
+                                                <a
+                                                    className="linkedText"
+                                                    href={props.data.gitHub}>
+                                                    <img
+                                                        src={gitHub}
+                                                        alt="GitHub"
+                                                        className={`contactIcons`}
 
-                                            />GitHub</a>
-                                    </h3>
-                                    <h3>
+                                                    />GitHub</a>
+                                            </h3>
+                                            <h3>
 
-                                        <a
-                                            className="linkedText"
-                                            href={props.data.linkedIn}
-                                            target="blank"
-                                        >          <img
-                                                src={linkedIn}
-                                                alt="LinkedIn"
-                                                className={`contactIcons`}
+                                                <a
+                                                    className="linkedText"
+                                                    href={props.data.linkedIn}
+                                                    target="blank"
+                                                >          <img
+                                                        src={linkedIn}
+                                                        alt="LinkedIn"
+                                                        className={`contactIcons`}
 
-                                            />LinkedIn</a>
-                                    </h3>
+                                                    />LinkedIn</a>
+                                            </h3>
+                                        </div>
+                                        <ContactForm />
+                                    </div>
                                 </div>
                             );
                         case 'bonus':
@@ -150,13 +157,13 @@ const Topic = (props) => {
                                 <div className='topicDiv'>
 
                                     <h1 className='topicTitle'>
-                              {props.data.title}</h1>
-                              <img
-                                            src={TJSelfie}
-                                            className={`imageCover `}
-                                            alt="TJ selfie"
+                                        {props.data.title}</h1>
+                                    <img
+                                        src={TJSelfie}
+                                        className={`imageCover `}
+                                        alt="TJ selfie"
 
-                                        />
+                                    />
                                     {props.data.paragraphs.map((paragraph, index) => (
                                         <p className='indented-paragraph' key={index}>{paragraph}</p>
                                     ))}

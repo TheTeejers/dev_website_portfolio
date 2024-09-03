@@ -72,6 +72,21 @@
   color: #fff;
 }
 
+.contactPage{
+  display: flex;
+  flex-direction: row; 
+}
+
+.formPage {
+  width: 50%;
+  margin: auto;
+}
+
+.submitFormButton{
+  cursor: pointer;
+  background-color: #0fa;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -117,3 +132,55 @@ a {
   
 }
 
+.popup{
+  display: flex;
+  flex-direction: column;
+  /* justify-content:space-around; */
+  border-style: groove;
+  border-radius: 5%;
+  height: 50vh;
+  width: 50vw;
+  background-color: #000;
+  color: #0fa;
+  box-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, 20px 0vw 200px #0fa;
+  animation: 1s fadeIn forwards;
+}
+
+.closeModal {
+  outline: none;
+  border: none;
+  border-radius: 40%;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #202020;
+  color: #eaeaea;
+  padding: 10px 40px;
+  position: absolute;
+  bottom: 1%;
+  right: 2%;
+  box-shadow: 1px 0px 4px #FFF, 2px 0px 4px #FFF, 3px 0px 4px #FFF, 2px 0px 3px #0fa, 2px 3px 15px #0fa, inset 0 0 .25em #fff, inset 0 0 .51em #fff, inset 0 0 .75em #0fa;
+}
+
+input{
+  width: 75%;
+  word-wrap: break-word;
+  text-wrap: wrap;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+#messageInput {
+  min-height: 10vh;
+  
+
+  /* Adjust height as needed, potentially remove it */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px; /* Adjust padding as needed */
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+input[type=text]:focus {
+  background-color: lightblue;
+}
